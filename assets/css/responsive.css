@@ -1,0 +1,180 @@
+/* Mobile Menu Core Style*/
+.slicknav_btn { display: block;}
+.slicknav_menu  .slicknav_menutxt { display:inline-block;  }
+.slicknav_menu .slicknav_icon {
+	padding-right:0;
+}
+.slicknav_menu .slicknav_icon:before,
+.slicknav_open .slicknav_arrow:before,
+.slicknav_collapsed .slicknav_arrow:before {
+	font-family: "Ionicons";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size:15px;
+    position: absolute;
+    top:2px;
+    left:0;
+}
+.slicknav_open .slicknav_arrow:before {
+	content:  "\f123";
+	left:0;
+	right:inherit;
+}
+.slicknav_collapsed .slicknav_arrow:before{ 
+	content: "\f124";
+	left:0;
+	right:inherit;
+}
+.slicknav_open .slicknav_arrow,
+.slicknav_collapsed .slicknav_arrow {
+	position:relative;
+}
+.slicknav_menu .slicknav_icon:before {
+	font-family: "Ionicons";
+	content: "\f394";
+	font-size:30px;
+	right:0;
+	top:8px;
+	left:inherit;
+	color:#fff;
+	background-position:0 0;
+	width:30px;
+	height:30px;
+	display:block;
+}
+.slicknav_menu .slicknav_open .slicknav_icon:before {content: "\f2d7"; background-position:0 -30px}
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar {}
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {}
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow  { float:left;}
+.slicknav_nav .menu-item-has-children > a.slicknav_item { padding-right:15px}
+.slicknav_nav .slicknav_item { cursor: pointer; padding: 10px 0px 10px 0; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+.slicknav_menu {
+	width:100%;
+	display:none;
+	max-height:400px;
+	overflow:auto;
+	padding-top:14px;
+}
+.slicknav_btn {
+	position:absolute;
+	right:15px;
+	top:-52px;
+	z-index:2;
+	display:none;
+}
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {
+	font-size:18px;
+	color:#ff7600;
+	letter-spacing:1px;
+	font-weight:normal;
+	line-height:60px;
+	padding-right:0;
+	text-transform:uppercase;
+	float:left;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+}
+.slicknav_nav {
+    margin:0;
+    padding:0 0 20px;
+	background:#2b2929;
+}
+.slicknav_nav li {
+	display:block;
+	padding:0;
+	border-top: 1px solid rgba(5, 53, 95, .05);
+	font-weight:500;
+}
+.slicknav_nav li:first-child {
+	border:none;
+}
+.slicknav_nav li ul {
+	border-top: 1px solid rgba(5, 53, 95, .05);
+}
+.slicknav_nav li ul li {
+	font-weight:500;
+}
+.slicknav_nav li a {
+	color:#fff;
+	font-size:16px;
+	padding:8px 0;
+	font-weight:400;
+	position:relative;
+}
+.slicknav_nav li ul li a {
+	font-size:14px;
+	position: relative;
+	padding:10px 24px 10px 35px;
+}
+.slicknav_nav li ul li a::after {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 1px;
+	right: 6px;
+	top: 50%;
+	z-index: 5;
+	background: #fff;
+	transform: translateY(-50%);
+}
+.slicknav_nav li ul li ul li a { 
+	font-size:14px;
+	padding:10px 30px 10px 35px;
+}
+.slicknav_nav li a:hover,
+.slicknav_nav li.current_page_item > a {
+	color:#92faff;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+	display: inline-block !important;
+	text-decoration:none !important;
+	padding-bottom:0;
+	padding-top:0;
+}
+
+@media screen and (max-width:991px ){
+	.only_desktop_view { display:none !important}
+	.only_mobile_view { display:block !important}
+
+	.header_container {
+	    padding-top: 20px;
+	}
+	.main_menu #menu { display:none}
+	.logo {
+		width:125px;
+	}
+	.slicknav_menu {
+		display:block;
+	}
+	#menu_holder .slicknav_nav { display:block !important}
+	#menu_holder {
+		display:block;
+	}
+	.menu_bar { 
+		display: flex;
+	    flex-direction: column;
+	    justify-content: flex-end;
+	    align-items: flex-end;
+	    margin: -20px 0 0 0;
+	}
+}
